@@ -1,16 +1,17 @@
-# Основные зависимости для генератора инфографики
 streamlit>=1.28.0
-Pillow>=10.0.0
 pandas>=2.0.0
+pillow>=10.0.0
 requests>=2.31.0
-psutil>=5.9.0
-
-# Установка streamlit_gsheets напрямую из GitHub репозитория
-git+https://github.com/streamlit/gsheets-connection
-
-# Дополнительные зависимости (если используются)
+gspread>=5.12.0
+google-auth>=2.23.0
 numpy>=1.24.0
-httpx>=0.24.0
-colorlog>=6.7.0
-python-dateutil>=2.8.2
-pympler>=1.0.0
+plotly>=5.18.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0  # Для векторного поиска
+openpyxl>=3.1.0
+python-multipart>=0.0.6
+python-dotenv>=1.0.0
+loguru>=0.7.0  # Улучшенное логирование
+pydantic>=2.0.0  # Валидация данных
+typing-extensions>=4.0.0
+cachetools>=5.3.0  # Для продвинутого кэширования
