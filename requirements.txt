@@ -1,17 +1,7 @@
-streamlit>=1.28.0
-pandas>=2.0.0
-pillow>=10.0.0
-requests>=2.31.0
-gspread>=5.12.0
-google-auth>=2.23.0
-numpy>=1.24.0
-plotly>=5.18.0
-sentence-transformers>=2.2.0
-faiss-cpu>=1.7.0  # Для векторного поиска
-openpyxl>=3.1.0
-python-multipart>=0.0.6
-python-dotenv>=1.0.0
-loguru>=0.7.0  # Улучшенное логирование
-pydantic>=2.0.0  # Валидация данных
-typing-extensions>=4.0.0
-cachetools>=5.3.0  # Для продвинутого кэширования
+streamlit==1.25.0
+pandas==1.5.3
+pillow==9.4.0
+requests==2.31.0
+gspread==5.12.0
+google-auth==2.20.0
+gspread-dataframe==3.4.0
