@@ -43,3 +43,5 @@ watchdog==6.0.0
 # gspread и google-auth для работы с Google Sheets
 gspread>=5.0.0
 google-auth>=2.0.0
+git+https://github.com/streamlit/gsheets-connection
+
