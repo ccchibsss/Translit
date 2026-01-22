@@ -1,32 +1,29 @@
-name: Streamlit App
+name: Setup Python and Dependencies
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout репозитория
-        uses: actions/checkout@v2
+      # 1. Получение кода репозитория
+      - uses: actions/checkout@v4
 
-      - name: Настройка Python
-        uses: actions/setup-python@v2
+      # 2. Настройка Python (рекомендуемая версия — 3.9 или выше)
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.8'
+          python-version: '3.11' # Укажите версию, подходящую для вашего проекта
 
-      - name: Установка зависимостей
+      # 3. Установка зависимостей из requirements.txt
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install streamlit-gsheets
-          pip install -r Translit/requirements.txt
+          pip install -r requirements.txt
 
-      - name: Запуск приложения Streamlit
+      # 4. (Опционально) Запуск скрипта для проверки
+      - name: Run a basic test
         run: |
-          streamlit run Translit/app.py
+          python -c "import streamlit; print('Streamlit version:', streamlit.__version__)"
+          python -c "from streamlit_gsheets import GSheetsConnection; print('GSheets Connection imported successfully')"
