@@ -1,4 +1,3 @@
-# Основные библиотеки для Streamlit и анализа данных
 streamlit>=1.28.0
 pandas==2.3.3
 numpy==2.4.1
@@ -6,7 +5,6 @@ pyarrow==23.0.0
 pydeck==0.9.1
 pillow==12.1.0
 requests==2.32.5
-# Вспомогательные библиотеки
 attrs==25.4.0
 blinker==1.9.0
 cachetools==6.2.4
@@ -42,6 +40,6 @@ typing-extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
 watchdog==6.0.0
-
-# ВАЖНО: Эта строка закомментирована, так как пакет недоступен в PyPI
-# streamlit-gsheets>=0.1.0
+# gspread и google-auth для работы с Google Sheets
+gspread>=5.0.0
+google-auth>=2.0.0
